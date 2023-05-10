@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.horizontal-scroll{
+  @apply overflow-x-auto p-2 scroll-smooth flex-nowrap
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.form-control {
+  @apply p-2 border-b bg-transparent border-gray-300 outline-none w-full focus:border-secondary-100
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.form-check-label{
+  @apply ml-1 font-medium text-gray-500
+}
+.form-check-secondary{
+  @apply bg-secondary-200 rounded border border-secondary-200
+}
+.btn{
+  @apply p-2 outline-none rounded-3xl font-medium hover:outline-none hover:ring-2 delay-500 transition-all
+}
+.btn-secondary-200 {
+  @apply bg-secondary-200 text-white hover:bg-white hover:text-secondary-200 hover:ring-secondary-100
+}
+.btn-secondary-200-inverse {
+  @apply bg-white text-secondary-200 hover:bg-secondary-200 hover:text-white hover:ring-white
+}
+.btn-main-700 {
+  @apply bg-main-700 text-white hover:bg-white hover:text-main-700 hover:ring-main-300
+}
+.list-group{
+  @apply flex flex-col gap-5
+}
+.list-group-item {
+  @apply flex items-center gap-3
+}
+.item-card{
+  @apply shadow p-3 flex flex-col mb-4
+}
+.triangle-up{
+  @apply after:border-l-8 after:border-l-transparent after:border-r-8 after:border-r-transparent after:border-b-16 after:border-b-gray-200 after:absolute after:-top-2 after:right-0
 }

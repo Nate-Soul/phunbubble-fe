@@ -1,0 +1,20 @@
+.left-side-bar, .right-side-bar{
+    height: calc(100vh - 80px);
+}
+.hide-scrollbar{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+.login{
+    background: rgb(204, 104, 100);
+    background: linear-gradient(rgba(204,104,100,.7), rgba(204,104,100,.7)), url('http://localhost:3000/images/Happy%20people%20jumping%20vector.jpg') no-repeat center center/contain;
+}
+.register{
+    background: rgb(204, 104, 100);
+    background: linear-gradient(rgba(204,104,100,.7), rgba(204,104,100,.7)), url('http://localhost:3000/images/group%20of%20joyful%20people%20vector.jpg') no-repeat center center/contain;
+}
