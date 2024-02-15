@@ -16,5 +16,5 @@
 }
 .register{
     background: rgb(204, 104, 100);
-    background: linear-gradient(rgba(204,104,100,.7), rgba(204,104,100,.7)), url('http://localhost:3000/images/group%20of%20joyful%20people%20vector.jpg') no-repeat center center/contain;
+    background: linear-gradient(rgba(204,104,100,.7), rgba(204,104,100,.7)), url('http://localhost:3001/images/group%20of%20joyful%20people%20vector.jpg') no-repeat center center/contain;
 }

@@ -19,7 +19,7 @@ const Login = () => {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique laudantium voluptates pariatur enim, sequi mollitia ipsa, odio inventore reprehenderit ratione necessitatibus reiciendis quod?
           </p>
           <p>
-            <span>Don't have an account?</span>
+            <span>Don&apos;t have an account?</span>
           </p>
           <Link href="/register" className="block w-1/2 mx-auto btn btn-secondary-200-inverse">Register</Link>
         </div>                        

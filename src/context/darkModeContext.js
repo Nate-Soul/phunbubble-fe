@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { createContext, useEffect, useState } from "react";
 
@@ -7,16 +7,25 @@ export const DarkModeContext = createContext()
 export const DarkModeContextProvider = ({children}) => {
     
     const [darkMode, setDarkMode] = useState(
-        //localStorage.getItem("darkMode") || 
-        false
+        () => {
+            if(typeof window !== "undefined"){
+                const storedTheme = window.localStorage.getItem("theme");
+                return storedTheme !== null ? storedTheme : 
+                    window.matchMedia("(prefered-color-scheme: dark)").matches ? "true" : "false";
+            } else {
+                return "false";
+            }
+        }
     );
 
     const toggleThemeMode = () => {
-        setDarkMode(!darkMode)
+        setDarkMode((prev) => !prev);
     }
 
     useEffect(()=>  {
-        localStorage.setItem("darkMode", darkMode);
+        if(typeof window !== "undefined"){
+            localStorage.setItem("darkMode", darkMode);
+        }
     }, [darkMode])
 
     return (
